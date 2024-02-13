@@ -8,24 +8,26 @@ This lab will guide you through the process of writing SQLAlchemy models and mak
 
 Clone this repository to your computer. 
 
-**Take a look at the code** - it looks a bit different than what you're used to. Namely, the code is now separated out into several files rather than being written in a single `app.py` file. Since we're now writing model code as well as route code, this will help us to maintain some structure and separation. (Also, it's really handy to be able to look at your models code side-by-side with your routes code!)
+**Take a look at the code** - it looks a bit different than what you're used to. Namely, the code is now separated out into several files rather than being written in a single `app.py` file. Since we're now writing model and form code as well as route code, this will help us to maintain some structure and separation.
 
-**To run the code**, navigate to the project folder and run the following to install the required packages:
+**To run the code**, navigate to the project folder and run the following to create a virtual environment and install the required packages:
 
-```
-pip3 install -r requirements.txt
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
 
 Then, rename the `.env.example` file to `.env`:
 
-```
+```bash
 mv .env.example .env
 ```
 
 Then you can run the following to run the Flask server:
 
-```
-python3 app.py
+```bash
+python app.py
 ```
 
 ## Part 1: Making Queries
@@ -43,7 +45,7 @@ The relationships between `Book`, `Author`, and `Genre` are as follows:
 **Start up your terminal and navigate to the outer project folder** (the one that contains `app.py`). **Run the Python interpreter** with the command:
 
 ```bash
-python3
+python
 ```
 
 You should see a command prompt appear that looks like `>>>`. This means that we are running the interpreter. If you ever want to quit the interpreter, you can press `Ctrl` + `D` or type in `quit()`.
